@@ -11,7 +11,14 @@ var selecionarPalavra = biblioteca[posicaoAleatoria];
 
 var tamanhoPalavraSorteada = selecionarPalavra.length;
 
-function play(){
+var errou ;
+function play(letraParametro){
+		if( letraParametro != null){
+			if(letraParametro.match(selecionarPalavra)){
+				document.getElementById("letra"+letraParametro.search(selecionarPalavra)).value=letraParametro;	
+			}
+		}
+
 
 };
 
@@ -32,6 +39,7 @@ function defineLetras(valor){
 }
 
 function init(){
+		errou = 0;
 		Palavra = document.getElementById("checkPalavra");
 		Palavra.value = null;
 		document.getElementById("letrasDigitadas").innerHTML="Letras Digitadas:";
