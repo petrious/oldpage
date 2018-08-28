@@ -1,5 +1,5 @@
 
-var biblioteca = ["ABACATE", "ABACAXI", "ABIU", "ABRUNHO", "ABUTUA", "AÇAÍ", "ACEROLA", "ACHACHAIRU", "ACHUÁ", "AGUAÍ", "AJURU", "AKEE", "AMAPÁ", "AMEIXA", "AMÊNDOA", "AMORA", "ANTIDESMA", "APIRANGA", "ARAÇÁ", "ARICURI", "ARIRI", "ATEMOIA", "AVELÃ", "AVOCADO", "BABACO", "BABAÇU", "BACABA", "BACURI", "BACURIPARI", "BALATA", "BANANA", "BARU", "BILIMBI", "BIRIBÁ", "BURANHÉM", "BURITI", "BUTIÁ", "CABELUDINHA", "CACAU", "CAFEZINHO", "CAGAITA", "CAINITO", "CAJÁ", "CAJU", "CALABAÇA", "CALABURA", "CALAMONDIN", "CAMBUCÁ", "CAMBUCI", "CAMUTIM", "CANISTEL", "CAQUI", "CARAMBOLA", "CARAMURI", "CARISSA", "CEREJA", "CHAMPEDAKE", "CHERIMOIA", "CIRIGUELA", "COCO", "CONDESSA", "CRANBERRY", "CRUÁ", "CUBIU", "CUPUAÇU", "CURUBA", "CUTITE", "DAMASCO", "DENDÊ", "DURIAN", "ESFREGADINHA", "FEIJOA", "FIGO", "FRAMBOESA", "GLYCOSMIS", "GOIABA", "GRANADILHA", "GRAVIOLA", "GROSELHA", "GRUMIXAMA", "GUABIJU", "GUABIROBA", "GUAÇATUNGA", "GUACHAMACA", "GUAGILOTE", "GUAMIRIM", "GUARANÁ", "HEISTÉRIA", "IMBÉ", "INAJÁ", "JABUTICABA", "JACA", "JAMBO", "JAMBOLÃO", "JARACATIÁ", "JATOBÁ", "JUÁ", "JUJUBA", "KINO", "KUMQUAT", "LACUCHA", "LANDIN", "LARANJA", "LICHIA", "LOBEIRA", "LONGAN", "LUCUMA", "LULO", "MABOLO", "MAÇÃ", "MACADÂMIA", "MAMÃO", "MAMEY", "MANGA", "MANGABA", "MANGOSTÃO", "MARACUJÁ", "MARMELO", "MAROLO", "MELANCIA", "MELÃO", "MIRTILO", "MORANGO", "MURICI", "MURUMURU", "NARANJILLA", "NECTARINA", "NÊSPERA", "NONI", "ORANGELO", "PAJURÁ", "PATAUÁ", "PEQUI", "PERA", "PÊSSEGO", "PHYSALIS", "PINDAÍVA", "PINHA", "PINHÃO", "PISTÁCHIO", "PITAIA", "PITANGATUBA", "PIXIRICA", "POMELO", "PUÇÁ", "PULASAN", "PUPUNHA", "RAMBAI", "RAMBUTÃO", "RANDIA", "ROMÃ", "RUKAM", "SACHAMANGO", "SAGUARAJI", "SALAK", "SANTOL", "SAPOTI", "SAPUCAIA", "SAPUTÁ", "SORVA", "TAIUVA", "TÂMARA", "TAMARINDO", "TANGERINA", "TANGOR", "TAPEREBÁ", "TAPIÁ", "TARUMÃ", "TATAJUBA", "TORANJA", "TOTAI", "TUCUJÁ", "TUCUM", "TUCUMÃ", "UARÁ", "UBUÇU", "UCHUVA", "UMBU", "UMBUGUELA", "UMÊ", "UVA", "UVAIA", "UXI", "WAMPI", "XIXÁ"];
+var biblioteca = ["ABACATE", "ABACAXI", "ABIU", "ABRUNHO", "ABUTUA", "AÇAÍ", "ACEROLA", "ACHACHAIRU", "ACHUÁ", "AGUAÍ", "AJURU", "AKEE", "AMEIXA", "AMÊNDOA", "AMORA", "ANTIDESMA", "APIRANGA", "ARAÇÁ", "ARICURI", "ARIRI", "ATEMOIA", "AVELÃ", "AVOCADO", "BABACO", "BABAÇU", "BACABA", "BACURI", "BACURIPARI", "BALATA", "BANANA", "BARU", "BILIMBI", "BIRIBÁ", "BURANHÉM", "BURITI", "BUTIÁ", "CABELUDINHA", "CACAU", "CAFEZINHO", "CAGAITA", "CAINITO", "CAJÁ", "CAJU", "CALABAÇA", "CALABURA", "CALAMONDIN", "CAMBUCÁ", "CAMBUCI", "CAMUTIM", "CANISTEL", "CAQUI", "CARAMBOLA", "CARAMURI", "CARISSA", "CEREJA", "CHAMPEDAKE", "CHERIMOIA", "CIRIGUELA", "COCO", "CONDESSA", "CRANBERRY", "CRUÁ", "CUBIU", "CUPUAÇU", "CURUBA", "CUTITE", "DAMASCO", "DENDÊ", "DURIAN", "ESFREGADINHA", "FEIJOA", "FIGO", "FRAMBOESA", "GLYCOSMIS", "GOIABA", "GRANADILHA", "GRAVIOLA", "GROSELHA", "GRUMIXAMA", "GUABIJU", "GUABIROBA", "GUAÇATUNGA", "GUACHAMACA", "GUAGILOTE", "GUAMIRIM", "GUARANÁ", "HEISTÉRIA", "IMBÉ", "INAJÁ", "JABUTICABA", "JACA", "JAMBO", "JAMBOLÃO", "JARACATIÁ", "JATOBÁ", "JUÁ", "JUJUBA", "KINO", "KUMQUAT", "LACUCHA", "LANDIN", "LARANJA", "LICHIA", "LOBEIRA", "LONGAN", "LUCUMA", "LULO", "MABOLO", "MAÇÃ", "MACADÂMIA", "MAMÃO", "MAMEY", "MANGA", "MANGABA", "MANGOSTÃO", "MARACUJÁ", "MARMELO", "MAROLO", "MELANCIA", "MELÃO", "MIRTILO", "MORANGO", "MURICI", "MURUMURU", "NARANJILLA", "NECTARINA", "NÊSPERA", "NONI", "ORANGELO", "PAJURÁ", "PATAUÁ", "PEQUI", "PERA", "PÊSSEGO", "PHYSALIS", "PINDAÍVA", "PINHA", "PINHÃO", "PISTÁCHIO", "PITAIA", "PITANGATUBA", "PIXIRICA", "POMELO", "PUÇÁ", "PULASAN", "PUPUNHA", "RAMBAI", "RAMBUTÃO", "RANDIA", "ROMÃ", "RUKAM", "SACHAMANGO", "SAGUARAJI", "SALAK", "SANTOL", "SAPOTI", "SAPUCAIA", "SAPUTÁ", "SORVA", "TAIUVA", "TÂMARA", "TAMARINDO", "TANGERINA", "TANGOR", "TAPEREBÁ", "TAPIÁ", "TARUMÃ", "TATAJUBA", "TORANJA", "TOTAI", "TUCUJÁ", "TUCUM", "TUCUMÃ", "UARÁ", "UBUÇU", "UCHUVA", "UMBU", "UMBUGUELA", "UMÊ", "UVA", "UVAIA", "UXI", "WAMPI", "XIXÁ"];
 var element;
 
 var quantidadePalavra = biblioteca.length - 1;
@@ -36,7 +36,7 @@ function play(letraParametro) {
 			}
 		} else {
 			erros++;
-			if (erros <= 5) {
+			if (erros <= 8) {
 				arrayErros.push(letraParametro);
 				document.getElementById("letrasDigitadas").innerHTML = "Letras Digitadas Erradas:" + arrayErros;
 				exibeBoneco();
@@ -65,7 +65,6 @@ function defineLetras(valor) {
 
 function init() {
 	limparBoneco();
-	var arrayErros = [];
 	document.getElementById("msg").innerText = "";
 	erros = 0;
 	acertos = 0;
@@ -86,34 +85,62 @@ function limparBoneco() {
 	$('.braco-direito').css('display', 'none');
 	$('.braco-esquerdo').css('display', 'none');
 	$('.perna-direita').css('display', 'none');
+
+	$('.cabeca').css('animation-duration', 'none');
+		$('.cabeca').css('animation-name', 'none');
+		$('.cabeca').css('animation-iteration-count', 'none');
+		$('.cabeca').css('animation-direction', 'none');
+
+		$('.braco-direito').css('animation-duration', 'none');
+		$('.braco-direito').css('animation-name', 'none');
+		$('.braco-direito').css('animation-iteration-count', 'none');
+		$('.braco-direito').css('animation-direction', 'none');
+		$('.braco-esquerdo').css('animation-duration', 'none');
+		$('.braco-esquerdo').css('animation-name', 'none');
+		$('.braco-esquerdo').css('animation-iteration-count', 'none');
+		$('.braco-esquerdo').css('animation-direction', 'none');
+
+		$('.perna-direita').css('animation-duration', 'none');
+		$('.perna-direita').css('animation-name', 'none');
+		$('.perna-direita').css('animation-iteration-count', 'none');
+		$('.perna-direita').css('animation-direction', 'none');
+
+		$('.perna-esquerda').css('animation-duration', 'none');
+		$('.perna-esquerda').css('animation-name', 'none');
+		$('.perna-esquerda').css('animation-iteration-count', 'none');
+		$('.perna-esquerda').css('animation-direction', 'none');
 };
 
 var exibeBoneco = function () {
+	console.log(erros);
 	debugger
-	if (acertos === 0) {
+	if (erros === 0) {
 		erros = 0;
 	} else if (erros === 1) {
-		$('.cabeca').css('display', 'block');
+		document.getElementById("cabeca").style.display = "block";
+		// $('.cabeca').css('display', 'block');
 	} else if (erros === 2) {
-		$('.cabeca').css('display', 'block');
-		$('.corpo').css('display', 'block');
+		document.getElementById("corpo").style.display = "block";
+
+		// $('.corpo').css('display', 'block');
 	} else if (erros === 3) {
-		$('.cabeca').css('display', 'block');
-		$('.corpo').css('display', 'block');
-		$('.braco-direito').css('display', 'block');
+		document.getElementById("braco-direito").style.display = "block";
+
+		// $('.braco-direito').css('display', 'block');
 	} else if (erros === 4) {
-		$('.cabeca').css('display', 'block');
-		$('.corpo').css('display', 'block');
-		$('.braco-direito').css('display', 'block');
-		$('.braco-esquerdo').css('display', 'block');
-		$('.perna-direita').css('display', 'block');
+		document.getElementById("braco-esquerdo").style.display = "block";
+
+		// $('.braco-esquerdo').css('display', 'block');
+	} else if (erros === 5) {
+		document.getElementById("perna-direita").style.display = "block";
+
+		// $('.perna-direita').css('display', 'block');
+	} else if (erros === 6) {
+		document.getElementById("perna-esquerda").style.display = "block";
+
+		// $('.perna-esquerda').css('display', 'block');
 	} else {
-		$('.cabeca').css('display', 'block');
-		$('.corpo').css('display', 'block');
-		$('.braco-direito').css('display', 'block');
-		$('.braco-esquerdo').css('display', 'block');
-		$('.perna-direita').css('display', 'block');
-		$('.perna-esquerda').css('display', 'block');
+		
 		$('.cabeca').css('animation-duration', '1s');
 		$('.cabeca').css('animation-name', 'ficarRoxo');
 		$('.cabeca').css('animation-iteration-count', 'infinite');
