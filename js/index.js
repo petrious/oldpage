@@ -16,6 +16,17 @@ var erros;
 var acertos;
 
 
+window.addEventListener("keypress", myEventHandler, false);
+
+function myEventHandler(e) {
+    var keyCode = e.keyCode;
+    if (keyCode == 13) {
+		let valor = document.getElementById("checkPalavra").value;
+		play(valor);
+    }
+};
+
+
 function play(letraParametro) {
 	if (letraParametro == null) alert("Digite ao menos uma palavra! ");
 
@@ -112,8 +123,7 @@ function limparBoneco() {
 };
 
 var exibeBoneco = function () {
-	console.log(erros);
-	debugger
+
 	if (erros === 0) {
 		erros = 0;
 	} else if (erros === 1) {
