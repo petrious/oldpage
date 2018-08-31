@@ -14,6 +14,8 @@ var palavraAlterada;
 var arrayErros = [];
 var erros;
 var acertos;
+var stringLetras = "";
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 
 window.addEventListener("keypress", myEventHandler, false);
@@ -22,7 +24,7 @@ function myEventHandler(e) {
     var keyCode = e.keyCode;
     if (keyCode == 13) {
 		let valor = document.getElementById("checkPalavra").value;
-		play(valor);
+		if(!!valor) play(valor);
     }
 };
 
@@ -35,16 +37,24 @@ function play(letraParametro) {
 		letraParametro = letraParametro.toUpperCase();
 		
 		if (palavraAlterada.match(letraParametro)) {
-			while (palavraAlterada.match(letraParametro) != null) {
-				var posicao = palavraAlterada.search(letraParametro);
-				document.getElementById("letra" + posicao).value = letraParametro;
-				palavraAlterada = palavraAlterada.replace(letraParametro, '0');
-				palavraAlterada.match(letraParametro);
-				acertos++;
-				if(acertos == tamanhoPalavraSorteada){
-					fim( "Você ganhou! Parabéns =)");
+			let verificacao =stringLetras.match(letraParametro)!=null;
+			stringLetras = stringLetras.concat(letraParametro);
+			if(!verificacao){
+				while (palavraAlterada.match(letraParametro) != null) {
+					var posicao = palavraAlterada.search(letraParametro);
+					document.getElementById("letra" + posicao).value = letraParametro;
+					palavraAlterada = palavraAlterada.replace(letraParametro, '0');
+					palavraAlterada.match(letraParametro);
+					acertos++;
+					if(acertos == tamanhoPalavraSorteada){
+						fim( "Você ganhou! Parabéns =)");
+					}
 				}
+			}else{
+				mensagem("Letra já escolhida -.-' ");
 			}
+
+			
 		} else {
 			erros++;
 			if (erros <= 8) {
@@ -59,7 +69,7 @@ function play(letraParametro) {
 	document.getElementById("checkPalavra").value = null;
 };
 
-function dica() {
+function resposta() {
 	alert(selecionarPalavra);
 };
 
@@ -76,9 +86,10 @@ function defineLetras(valor) {
 
 function init() {
 	limparBoneco();
-	document.getElementById("msg").innerText = "";
+	limparMensagem();
 	erros = 0;
 	acertos = 0;
+	stringLetras = "";
 	arrayErros = [];
 	Palavra = document.getElementById("checkPalavra");
 	Palavra.value = null;
@@ -179,14 +190,20 @@ var exibeBoneco = function () {
 
 		
 	}
-}
+};
 
-function fim(msg){
-	setTimeout(function () {
+async function fim(msg){
+	mensagem(msg);
+	await delay(3000);
 		init();
-	}, 3000);
+	};
+
+async function mensagem(msg){
 	document.getElementById("msg").innerText = msg;
-
-}
-
+	await delay(3000);
+	limparMensagem();
+};
+function limparMensagem(){
+	document.getElementById("msg").innerText = "";
+};
 
