@@ -18,15 +18,22 @@ var stringLetras = "";
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 
-window.addEventListener("keypress", myEventHandler, false);
+window.addEventListener("keyup", myEventHandler, false);
 
 function myEventHandler(e) {
-    var keyCode = e.keyCode;
+	debugger
+	var keyCode = e.keyCode;
+	validate();
     if (keyCode == 13) {
 		let valor = document.getElementById("checkPalavra").value;
 		if(!!valor) play(valor);
     }
 };
+
+function validate() {
+	var element = document.getElementById('checkPalavra');
+	element.value = element.value.replace(/[^a-zA-Z0-9@]+/, '');
+  };
 
 
 function play(letraParametro) {
