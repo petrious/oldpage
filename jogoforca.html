@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/hangman.css" />
+  <link rel="stylesheet" href="./css/tooltip.css" />
+
+  <style>
+    .letra {
+      width: 30px;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 5px;
+      display: inline;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <h1>Aula HTML5</h1>
+      </nav>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-6 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Jogo da Forca</h4>
+                  <p class="card-description">
+                    Dica : Fruta
+                  </p>
+                  <form class="form-sample ">
+                    <div id="divPalavra" class="d-flex justify-content-center">
+                      <input type="text" class="letra" id="letra0" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra1" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra2" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra3" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra4" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra5" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra6" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra7" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra8" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra9" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra10" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra11" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra12" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra13" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra14" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra15" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra16" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra17" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra18" maxlength="1" readonly>
+                      <input type="text" class="letra" id="letra19" maxlength="1" readonly>
+                    </div>
+                    <hr>
+                    <div id="divPlayer">
+                      <input type="text" id="checkPalavra" autofocus maxlength="1" style="text-transform:uppercase">
+                      <button type="button" class="btn btn-info btn-sm" id="btnPlay" onclick="play(checkPalavra.value || null)">Enter
+                        </button>
+                      <button type="button" class="btn btn-danger btn-sm float-right" onclick="resposta()">Resposta</button>
+                      <hr>
+                      <h3 id="letrasDigitadas">Letras Digitadas Erradas:</h3><br>
+                    </div>
+
+                  </form>
+                </div>
+                <div class="float-right pl-1">
+                  <button type="button" class="btn btn-info btn-sm float" id="element" onclick="init()">Resetar </button>
+                </div><br>
+              </div>
+
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-lg-6 color-none">
+              <div id="cabeca" class="cabeca corBoneco">
+              </div>
+              <div id="suspende" class="suspende corBoneco">
+                <div class="desce corBoneco">
+                </div>
+
+                <div id="prende" class="prende corBoneco">
+                </div>
+
+                <div id="corpo" class="corpo corBoneco">
+                  <div id="braco-esquerdo" class="braco-esquerdo corBoneco">
+                  </div>
+
+                  <div id="braco-direito" class="braco-direito corBoneco">
+                  </div>
+
+                  <div id="perna-esquerda" class="perna-esquerda corBoneco">
+                  </div>
+
+                  <div id="perna-direita" class="perna-direita corBoneco">
+                  </div>
+                </div>
+
+              </div>
+
+              <div id="base" class="base corBoneco">
+
+              </div>
+            </div>
+            <h1 id="msg">
+
+            </h1>
+
+          </div>
+
+        </div>
+
+        <footer class="footer">
+          <div class="container-fluid clearfix">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
+              <a href="http://www.bootstrapdash.com/" target="_blank">Zampro</a>. All rights reserved.</span>
+
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./js/index.js"></script>
+
+  <script src="./jquery.js"></script>
+  <script> window.addEventListener("load", init())</script>
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,7 @@
+.letra {
+    width: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 5px;
+    display: inline;
+  }
