@@ -1,0 +1,8 @@
+		#mapid {
+			height: 500px;
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.leaflet-routing-container {
+			display: none;
+		}
