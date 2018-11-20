@@ -6,8 +6,16 @@ function sort(a) {
 
 
 self.addEventListener('message', function(e) {
+    console.log("cheguei no nativo");
     var array = e.data;
     sort(array);
  	self.postMessage(array);
 }, false);
+
+// self.onmessage = function(e) {
+//     console.log("cheguei no bubble");
+//     var array = e.data;
+//     sort(array);
+//  	self.postMessage(array);
+// };
 
