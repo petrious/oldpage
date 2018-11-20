@@ -1,0 +1,36 @@
+
+body {
+  margin: 0;
+}
+canvas {
+	position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+      margin: auto;
+      background:black;
+} 
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #232741;
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 50%;
+} 
+.tutorial {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  max-width: 280px;
+  color: #13e8e9;
+  font-size: 0.9em;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+
