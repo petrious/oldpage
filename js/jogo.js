@@ -1,5 +1,12 @@
 var canvas, ctx, ALTURA, LARGURA, frames = 0, velocidade = 6, record;
 
+var img;
+
+var sons = [];
+
+sons[0] = new Audio("../audio/pulo.mp3");
+sons[1] = new Audio("../audio/perdeu.mp3");
+sons[2] = new Audio("../audio/ambientedurante.mp3");
 
 var estadoAtual;
 
@@ -14,7 +21,7 @@ var maxPulos = 2;
 var floor = {
 	y: 550,
 	altura: 50,
-	cor: "#fff",
+	cor: "black",
 	desenha: function () {
 		ctx.fillStyle = this.cor;
 		ctx.fillRect(0, this.y, LARGURA, this.altura);
@@ -24,8 +31,10 @@ var floor = {
 var person = {
 	x: 50, // Initial x-coordinate
 	y: 0, // Initial y-coordinate
-	altura: 50,
-	largura: 50,
+	altura: cube.altura,
+	largura: cube.largura,
+	// altura: 50,
+	// largura: 50,
 	cor: "blue",
 	gravidade: 1.8,
 	velocidade: 0,
@@ -46,6 +55,7 @@ var person = {
 	},
 
 	pula: function () {
+		sons[0].play();
 		if (estadoAtual == estados.jogando) {
 			if (this.quantidadePulos < maxPulos) {
 				this.velocidade = - this.forcaDoPulo;
@@ -67,8 +77,10 @@ var person = {
 	},
 	desenha: function () {
 
-		ctx.fillStyle = this.cor;
-		ctx.fillRect(this.x, this.y, this.largura, this.altura);
+		// ctx.fillStyle = this.cor;
+		// ctx.fillRect(this.x, this.y, this.largura, this.altura);
+
+		cube.desenha(this.x, this.y);
 
 	},
 };
@@ -82,7 +94,7 @@ var obstaculos = {
 			x: LARGURA,
 			largura: 50,
 			altura: 30 + Math.floor(120 * Math.random()),
-			cor: "#fff"
+			cor: "black"
 		});
 		this.tempoInsere = 30 + Math.floor(21 * Math.random());
 	},
@@ -99,8 +111,10 @@ var obstaculos = {
 		for (var i = 0; i < tam; i++) {
 			var obs = this._obs[i];
 			obs.x -= velocidade;
-			if (person.x < obs.x + obs.largura && person.x + person.largura >= obs.x && person.y + person.altura >= floor.y - obs.altura)
+			if (person.x < obs.x + obs.largura && person.x + person.largura >= obs.x && person.y + person.altura >= floor.y - obs.altura) {
+				sons[1].play();
 				estadoAtual = estados.perdeu;
+			}
 
 			else if (obs.x == 0) {
 				person.score++;
@@ -133,6 +147,10 @@ function desenha() {
 	ctx.fillStyle = "#000";
 	ctx.fillRect(0, 0, LARGURA, ALTURA);
 
+	bg.desenha(0, 0);
+
+
+
 	ctx.fillStyle = "#fff";
 	ctx.font = "15px Arial";
 	ctx.fillText("Score", 25, 25);
@@ -152,7 +170,6 @@ function desenha() {
 		ctx.fillText("Jogar", LARGURA / 2 - 65, ALTURA / 2 - 65);
 	}
 	else if (estadoAtual == estados.perdeu) {
-
 		ctx.fillStyle = "red";
 		ctx.fillRect(LARGURA / 2 - 50, ALTURA / 2 - 50, 100, 100);
 
@@ -173,7 +190,6 @@ function desenha() {
 		else
 			ctx.fillText(person.score, -39, 19);
 		ctx.restore();
-
 	}
 	else if (estadoAtual == estados.jogando) {
 		obstaculos.desenha();
@@ -270,6 +286,10 @@ function main() {
 		record = 0;
 
 	estadoAtual = estados.jogar;
+	img = new Image();
+	// img.src= "../img/cube.png";
+	img.src = "../img/sheet.png";
+	// img.src= "https://i.imgur.com/X5rGkBV.png";
 	roda();
 }
 
