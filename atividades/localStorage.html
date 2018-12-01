@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../css/resume.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body style="padding-right :17em !important; ">
+    <nav class="navbar navbar-expand-lg  bg-primary fixed-top" id="sideNav">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+
+            </ul>
+        </div>
+
+        <button class="fas fa-arrow-left" onclick="window.location.href='../index.html'">Voltar</button>
+    </nav>
+
+    <h1 align="center">Local Storage</h1>
+    <br>
+    <br>
+
+    <div class="d-flex justify-content-center">
+
+            <h4>Nome</h4>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md-12">
+                <input type="text" id="nome" class="form-control" placeholder="Name..."></input>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="d-flex justify-content-center">
+
+            <h4>Ultimo Acesso</h4>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md-12">
+                <input type="text" name="acesso" id="acesso" disabled="disabled" class="form-control" >
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <div class="d-flex justify-content-center">
+        <h4>Digite um texto</h4>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md-12">
+                <textarea  id="texto"  class="form-control" placeholder="Start typing..."></textarea>
+
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+<br>
+  <div class="d-flex justify-content-center ">
+      <div class="row">
+        <div class="col-md-12">
+         <button class="btn btn-primary" style="background-color: #343A40" onclick="limpar()">Resetar</button>
+        </div>
+  
+      </div>
+    </div>
+
+
+    <script src="../js/localStorage.js"></script>
+
+</body>
+
+
+
+
+</html>
