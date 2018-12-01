@@ -21,8 +21,8 @@ function verificarTempo() {
 
     var ultimoAcesso = localStorage.getItem('acesso');
     document.getElementById('acesso').value = ultimoAcesso;
-    if (min > 1800000) {
-        alert("Bem-vindo de Volta!");
+    if (min > 1800000 && (localStorage.getItem('timestamp')) != null) {
+        alert("Bem-vindo");
     }
 }
 
